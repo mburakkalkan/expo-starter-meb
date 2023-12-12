@@ -1,0 +1,21 @@
+import { Stack } from "expo-router";
+import MyCustomTheme from "../theme.json";
+
+// https://reactnavigation.org/docs/native-stack-navigator/#options
+
+export default function Layout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: MyCustomTheme.colors.secondaryContainer
+        },
+        headerTintColor: MyCustomTheme.colors.onSecondaryContainer,
+        headerTitleAlign: "center",
+        headerTitleStyle: {
+          fontWeight: "normal"
+        }
+      }}
+    />
+  );
+}
