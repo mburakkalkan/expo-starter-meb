@@ -8,6 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "local": "expo start --localhost",
+    "offline": "expo start --offline",
+    "tunnel": "expo start --tunnel",
     "expo-install": "expo install"
   },
   "dependencies": {
