@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import MyCustomTheme from "../theme.json";
+import MyCustomTheme from "@/paper-theme.json";
 
 // https://reactnavigation.org/docs/native-stack-navigator/#options
 

@@ -3,11 +3,12 @@ import { StatusBar } from "expo-status-bar";
 import { Stack } from "expo-router";
 import { MD3LightTheme, PaperProvider } from "react-native-paper";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import MyCustomTheme from "../theme.json";
+import MyCustomTheme from "@/paper-theme.json";
+import { ThemeProp } from "react-native-paper/lib/typescript/types";
 
 // https://callstack.github.io/react-native-paper/docs/guides/theming#creating-dynamic-theme-colors
 
-const theme = {
+const theme: ThemeProp = {
   ...MD3LightTheme,
   colors: {
     ...MD3LightTheme.colors,
