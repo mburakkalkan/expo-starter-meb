@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper from "@/components/PageWrapper";
+import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
 
-const screenOptions = {
+const screenOptions: PageWrapperProps["screenOptions"] = {
   title: "Sayfa 2",
   headerShown: true,
   headerRight: null

@@ -5,6 +5,7 @@ import { MD3LightTheme, PaperProvider } from "react-native-paper";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import MyCustomTheme from "@/paper-theme.json";
 import { ThemeProp } from "react-native-paper/lib/typescript/types";
+import { ComponentProps, PropsWithChildren } from "react";
 
 // https://callstack.github.io/react-native-paper/docs/guides/theming#creating-dynamic-theme-colors
 
@@ -16,7 +17,11 @@ const theme: ThemeProp = {
   }
 };
 
-export default function PageWrapper({ children, screenOptions }) {
+export interface PageWrapperProps extends PropsWithChildren {
+  screenOptions: ComponentProps<typeof Stack.Screen>["options"];
+}
+
+export default function PageWrapper({ children, screenOptions }: PageWrapperProps) {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
