@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <PageWrapper screenOptions={screenOptions}>
       <View style={styles.container}>
-        <Text>Bu sayfa app/index.js içindeki anasayfadır.</Text>
+        <Text>Bu sayfa app/index.tsx içindeki anasayfadır.</Text>
         <Link href="/page2">Sayfa 2'ye git</Link>
       </View>
     </PageWrapper>

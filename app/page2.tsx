@@ -12,7 +12,7 @@ export default function Page2() {
   return (
     <PageWrapper screenOptions={screenOptions}>
       <View style={styles.container}>
-        <Text>Bu sayfa app/page2.js içindeki sayfadır.</Text>
+        <Text>Bu sayfa app/page2.tsx içindeki sayfadır.</Text>
         <Link href="/">Anasayfaya dön</Link>
       </View>
     </PageWrapper>
