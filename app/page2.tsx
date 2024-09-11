@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "@/components/PageWrapper";
 
 const screenOptions = {
   title: "Sayfa 2",
