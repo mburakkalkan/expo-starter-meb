@@ -3,7 +3,7 @@ import { Link } from "expo-router";
 import PageWrapper from "../components/PageWrapper";
 
 const screenOptions = {
-  title: "Page 2",
+  title: "Sayfa 2",
   headerShown: true,
   headerRight: null
 };
