@@ -1,3 +1,5 @@
+/// <reference types="nativewind/types" />
+
 import { Stack } from "expo-router";
 import MyCustomTheme from "@/paper-theme.json";
 
