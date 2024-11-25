@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
+import PageWrapper, {
+  PageWrapperProps,
+} from "@/components/PageWrapper";
 
 const screenOptions: PageWrapperProps["screenOptions"] = {
   title: "Sayfa 2",
   headerShown: true,
-  headerRight: null
 };
 
 export default function Page2() {
@@ -21,6 +22,6 @@ export default function Page2() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });

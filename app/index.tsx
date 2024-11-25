@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
+import PageWrapper, {
+  PageWrapperProps,
+} from "@/components/PageWrapper";
 
 const screenOptions: PageWrapperProps["screenOptions"] = {
   title: "Home",
   headerShown: false,
-  headerRight: null
 };
 
 export default function Index() {
@@ -21,6 +22,6 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
