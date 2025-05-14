@@ -8,8 +8,17 @@ const {
 const NETWORK_CONFIG_PATH =
   "android/app/src/main/res/xml/network_security_config.xml";
 
+const content = `<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>  
+      <base-config>  
+            <trust-anchors>  
+                <certificates src="system" />  
+                <certificates src="user" />  
+           </trust-anchors>  
+      </base-config>  
+ </network-security-config>`;
+
 function withCustomNetworkSecurity(config) {
-  console.log("Custom network security plugin is running...");
   config = withDangerousMod(config, [
     "android",
     async (config) => {
@@ -25,9 +34,7 @@ function withCustomNetworkSecurity(config) {
         fs.mkdirSync(xmlDir, { recursive: true });
       }
 
-      const content = fs.readFileSync("network-config.xml");
-      console.log(content);
-      fs.writeFileSync(xmlPath, content.trim());
+      fs.writeFileSync(xmlPath, content);
 
       return config;
     },
