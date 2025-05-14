@@ -10,7 +10,7 @@ const NETWORK_CONFIG_PATH =
 
 const content = `<?xml version="1.0" encoding="utf-8"?>
 <network-security-config>  
-      <base-config>  
+      <base-config cleartextTrafficPermitted="true">  
             <trust-anchors>  
                 <certificates src="system" />  
                 <certificates src="user" />  
@@ -54,7 +54,6 @@ function withCustomNetworkSecurity(config) {
     return config;
   });
 
-  console.log("Custom network security plugin is added.");
   return config;
 }
 
