@@ -14,9 +14,14 @@
     "lint": "expo lint",
     "expo-install": "expo install",
     "reset-project": "node ./scripts/reset-project.js",
-    "build-android": "eas build --platform android --local",
-    "build-ios": "eas build --platform ios --local",
-    "build-web": "eas build --platform web --local"
+    "dev-build-all": "eas build --profile development",
+    "dev-build-android": "eas build --platform android --profile development",
+    "dev-build-ios": "eas build --platform ios --profile development",
+    "dev-build-web": "eas build --platform web --profile development",
+    "prod-build-all": "eas build --profile production",
+    "prod-build-android": "eas build --platform android --profile production",
+    "prod-build-ios": "eas build --platform ios --profile production",
+    "prod-build-web": "eas build --platform web --profile production"
   },
   "jest": {
     "preset": "jest-expo",
