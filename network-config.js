@@ -8,7 +8,7 @@ const {
 const NETWORK_CONFIG_PATH =
   "android/app/src/main/res/xml/network_security_config.xml";
 
-const TRUSTED_ROOTS_PATH = "android/app/src/main/res/raw/trusted-roots";
+const TRUSTED_ROOTS_PATH = "android/app/src/main/res/raw/trusted_roots";
 
 const networkConfigContent = `<?xml version="1.0" encoding="utf-8"?>
 <network-security-config>  
@@ -16,7 +16,7 @@ const networkConfigContent = `<?xml version="1.0" encoding="utf-8"?>
             <trust-anchors>  
                 <certificates src="system" />  
                 <certificates src="user" />
-                <certificates src="@raw/trusted-roots" />  
+                <certificates src="@raw/trusted_roots" />  
            </trust-anchors>  
       </base-config>  
  </network-security-config>`;
