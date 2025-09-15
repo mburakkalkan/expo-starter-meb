@@ -1,8 +1,6 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper, {
-  PageWrapperProps,
-} from "@/components/PageWrapper";
+import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
 import { Image } from "expo-image";
 
 const screenOptions: PageWrapperProps["screenOptions"] = {
@@ -11,12 +9,11 @@ const screenOptions: PageWrapperProps["screenOptions"] = {
 };
 
 export default function Index() {
+
   const click = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((resp) => resp.json())
-      .then(console.log);
     alert("Merhaba dünya!");
   };
+
   return (
     <PageWrapper screenOptions={screenOptions}>
       <View style={styles.container}>
