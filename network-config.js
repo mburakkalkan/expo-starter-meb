@@ -1,12 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const {
-  withAndroidManifest,
-  withDangerousMod,
-} = require("@expo/config-plugins");
+const { withAndroidManifest, withDangerousMod } = require("@expo/config-plugins");
 
-const NETWORK_CONFIG_PATH =
-  "android/app/src/main/res/xml/network_security_config.xml";
+const NETWORK_CONFIG_PATH = "android/app/src/main/res/xml/network_security_config.xml";
 
 const TRUSTED_ROOTS_PATH = "android/app/src/main/res/raw/trusted_roots";
 
@@ -21,6 +17,7 @@ const networkConfigContent = `<?xml version="1.0" encoding="utf-8"?>
       </base-config>  
  </network-security-config>`;
 
+// MEB SERTİFİKASI
 const fatihCA = `-----BEGIN CERTIFICATE-----
 MIIDfzCCAmegAwIBAgIQYazX7ESZkLxDARAO7Iyu2jANBgkqhkiG9w0BAQsFADBS
 MRIwEAYKCZImiZPyLGQBGRYCdHIxEzARBgoJkiaJk/IsZAEZFgNnb3YxFTATBgoJ
@@ -44,54 +41,44 @@ jB12iv+M0D3N9kmIxeFN6yH7k9rtHUUuXWTSjSB99Fdv6qA=
 -----END CERTIFICATE-----`;
 
 function withCustomNetworkSecurity(config) {
-  config = withDangerousMod(config, [
-    "android",
-    async (config) => {
-      const { projectRoot } = config.modRequest;
+	config = withDangerousMod(config, [
+		"android",
+		async (config) => {
+			const { projectRoot } = config.modRequest;
 
-      const xmlDir = path.join(
-        projectRoot,
-        "android/app/src/main/res/xml"
-      );
-      const xmlPath = path.join(projectRoot, NETWORK_CONFIG_PATH);
+			const xmlDir = path.join(projectRoot, "android/app/src/main/res/xml");
+			const xmlPath = path.join(projectRoot, NETWORK_CONFIG_PATH);
 
-      if (!fs.existsSync(xmlDir)) {
-        fs.mkdirSync(xmlDir, { recursive: true });
-      }
+			if (!fs.existsSync(xmlDir)) {
+				fs.mkdirSync(xmlDir, { recursive: true });
+			}
 
-      fs.writeFileSync(xmlPath, networkConfigContent);
+			fs.writeFileSync(xmlPath, networkConfigContent);
 
-      const rawDir = path.join(
-        projectRoot,
-        "android/app/src/main/res/raw"
-      );
-      const caPath = path.join(projectRoot, TRUSTED_ROOTS_PATH);
+			const rawDir = path.join(projectRoot, "android/app/src/main/res/raw");
+			const caPath = path.join(projectRoot, TRUSTED_ROOTS_PATH);
 
-      if (!fs.existsSync(rawDir)) {
-        fs.mkdirSync(rawDir, { recursive: true });
-      }
+			if (!fs.existsSync(rawDir)) {
+				fs.mkdirSync(rawDir, { recursive: true });
+			}
 
-      fs.writeFileSync(caPath, fatihCA);
+			fs.writeFileSync(caPath, fatihCA);
 
-      return config;
-    },
-  ]);
+			return config;
+		},
+	]);
 
-  config = withAndroidManifest(config, async (config) => {
-    const application = config.modResults.manifest.application?.[0];
+	config = withAndroidManifest(config, async (config) => {
+		const application = config.modResults.manifest.application?.[0];
 
-    if (
-      application &&
-      !application.$["android:networkSecurityConfig"]
-    ) {
-      application.$["android:networkSecurityConfig"] =
-        "@xml/network_security_config";
-    }
+		if (application && !application.$["android:networkSecurityConfig"]) {
+			application.$["android:networkSecurityConfig"] = "@xml/network_security_config";
+		}
 
-    return config;
-  });
+		return config;
+	});
 
-  return config;
+	return config;
 }
 
 module.exports = withCustomNetworkSecurity;
