@@ -1,18 +1,21 @@
-import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
+import CharacterBox from "@/components/CharacterBox";
+import type { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import axios from "axios";
-import { Image } from "expo-image";
+import { Stack } from "expo-router";
 import { useEffect, useState } from "react";
-import { ActivityIndicator, FlatList, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, View } from "react-native";
 
-const screenOptions: PageWrapperProps["screenOptions"] = {
+export const screenOptions: NativeStackNavigationOptions = {
 	title: "Fetch Örneği",
 	headerShown: true,
 };
 
 export default function Page2() {
+	// State tanımları
 	const [characters, setCharacters] = useState([]);
 	const [loading, setLoading] = useState(true);
 
+	// useEffect hook ile API çağrısı
 	useEffect(() => {
 		axios
 			.get("https://rickandmortyapi.com/api/character")
@@ -25,72 +28,26 @@ export default function Page2() {
 			.finally(() => setLoading(false));
 	}, []);
 
-	const renderItem = ({ item }) => (
-		<View style={styles.card}>
-			<Image source={{ uri: item.image }} style={styles.image} />
-			<View style={styles.info}>
-				<Text style={styles.name}>{item.name}</Text>
-				<Text style={styles.species}>{item.species}</Text>
-			</View>
-		</View>
-	);
-
+	// Yükleniyorsa ActivityIndicator göster
 	if (loading) {
 		return (
-			<View style={styles.center}>
+			<View className="flex-1 justify-center items-center">
 				<ActivityIndicator size="large" color="#00bfff" />
 			</View>
 		);
 	}
 
 	return (
-		<PageWrapper screenOptions={screenOptions}>
-			<View style={styles.container}>
-				<FlatList
-					data={characters}
-					keyExtractor={(item) => item.id.toString()}
-					renderItem={renderItem}
-					contentContainerStyle={styles.list}
-				/>
-			</View>
-		</PageWrapper>
+		<View className="flex-1">
+			<Stack.Screen options={screenOptions} />
+			{/* Karakter listesini FlatList ile göster */}
+			<FlatList
+				data={characters}
+				keyExtractor={(item) => item.id.toString()}
+				// Her bir karakteri render eden fonksiyon
+				renderItem={({ item }) => <CharacterBox character={item} />}
+				contentContainerStyle={{ padding: 16 }}
+			/>
+		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-	},
-	list: {
-		padding: 16,
-	},
-	card: {
-		flexDirection: "row",
-		marginBottom: 16,
-		backgroundColor: "#f5f5f5",
-		borderRadius: 12,
-		overflow: "hidden",
-		elevation: 2,
-	},
-	image: {
-		width: 100,
-		height: 100,
-	},
-	info: {
-		padding: 10,
-		justifyContent: "center",
-	},
-	name: {
-		fontWeight: "bold",
-		fontSize: 16,
-	},
-	species: {
-		fontSize: 14,
-		color: "#666",
-	},
-	center: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-	},
-});
