@@ -26,12 +26,11 @@ export default function Page2() {
       .get("https://rickandmortyapi.com/api/character")
       .then((response) => {
         setCharacters(response.data.results);
-        setLoading(false);
       })
       .catch((error) => {
         console.error("API error:", error);
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   const renderItem = ({ item }) => (
@@ -69,10 +68,9 @@ export default function Page2() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexWrap: "wrap",
   },
   list: {
-    padding: 16,
+    padding: 16
   },
   card: {
     flexDirection: "row",

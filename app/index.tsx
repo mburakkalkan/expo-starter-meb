@@ -1,7 +1,10 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
-import PageWrapper, { PageWrapperProps } from "@/components/PageWrapper";
+import PageWrapper, {
+  PageWrapperProps,
+} from "@/components/PageWrapper";
 import { Image } from "expo-image";
+import reactLogo from "@/assets/images/react-logo.png";
 
 const screenOptions: PageWrapperProps["screenOptions"] = {
   title: "Home",
@@ -9,7 +12,6 @@ const screenOptions: PageWrapperProps["screenOptions"] = {
 };
 
 export default function Index() {
-
   const click = () => {
     alert("Merhaba dünya!");
   };
@@ -17,6 +19,7 @@ export default function Index() {
   return (
     <PageWrapper screenOptions={screenOptions}>
       <View style={styles.container}>
+        <Image source={reactLogo} style={styles.reactLogo} />
         <Text className="text-red-500 font-bold text-center m-5">
           Bu ekran app/index.tsx içindeki ana ekrandır.
         </Text>
@@ -25,7 +28,6 @@ export default function Index() {
           style={styles.image}
           source="https://placehold.co/300x200"
           contentFit="cover"
-          transition={1000}
         />
         <Link href="/page2" className="text-blue-500 font-bold">
           Sayfa 2'ye Git
@@ -45,5 +47,9 @@ const styles = StyleSheet.create({
     width: 300,
     height: 200,
     margin: 30,
+  },
+  reactLogo: {
+    width: 100,
+    height: 100
   },
 });
