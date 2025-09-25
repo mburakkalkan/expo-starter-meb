@@ -2,7 +2,7 @@
 
 ## 🚀 Proje Tanıtımı
 
-**Expo Starter MEB**, MEB'e bağlı okullarda sorunsuz çalışacak şekilde özel olarak hazırlanmış, modern ve ölçeklenebilir bir React Native başlangıç projesidir. Proje, güncel tasarım standartlarına uygun olup hızlı geliştirme ve kolay özelleştirme imkanı sunar.
+**Expo Starter MEB**, MEB'e bağlı okullarda sorunsuz çalışacak şekilde özel olarak hazırlanmış, modern ve ölçeklenebilir bir React Native başlangıç projesidir. Proje, güncel tasarım standartlarına uygun olup yüksek donanım gereksinimi olmadan çoklu platformda hızlı geliştirme ve kolay özelleştirme imkanı sunar.
 
 📱 MTAL Bilişim Teknolojileri Alanı'nın **Mobil Uygulamalar** dersinde kullanıma uygundur. Web Tabanlı Uygulamalar dersiyle güçlü bir paralellik kurar. Özellikle React Native'in HTML ve CSS'e çok yakın sözdizimi sayesinde öğrenciler, mobil ve web konseptlerini karşılaştırmalı ve bütüncül bir şekilde öğrenebilir. Bir derste edindikleri bilgileri diğerine kolayca transfer edebilir ve böylece iki ders birbirini doğal olarak destekler hale gelir.
 
@@ -10,11 +10,10 @@
 
 -   🌐 **Gerçek Cross-Platform Geliştirme**: React Native ile tek bir kod tabanından hem Android hem de iOS için (ve Expo ile web için de) uygulama geliştirebilirsiniz. Böylece platform bağımsız, geniş kitlelere ulaşan projeler üretebilirsiniz.
 -   🚀 **Güncel Expo SDK**: Proje, en son sürüm Expo SDK ile uyumlu olarak geliştirilmiştir. Böylece en yeni özelliklerden ve performans iyileştirmelerinden faydalanabilirsiniz.
--   ⚡ **Live Reload (Canlı Yenileme)**: Kodda yaptığınız değişiklikler anında emülatör veya gerçek cihazda otomatik olarak yansır. Hızlı geliştirme ve anlık test imkanı sunar.
 -   🛡️ **MEB Sertifikası Desteği**: Proje, MEB ağına bağlı cihazlarda güvenli bağlantı için gerekli olan MEB kök sertifikasını otomatik olarak içerir ve uygular. Böylece ağ kısıtlamalarından etkilenmeden uygulamanız çalışır.
 -   🎨 **NativeWind ile Tailwind CSS Desteği**: NativeWind sayesinde, React Native projelerinde Tailwind CSS'in gücünü ve esnekliğini kullanabilirsiniz. Hızlı prototipleme ve tutarlı stil yönetimi sağlar.
 -   🧩 **React Native Paper ile Modern UI**: Google'ın Material Design prensiplerine uygun, erişilebilir ve şık arayüzler için React Native Paper entegre edilmiştir.
--   🌈 **SafeArea ve Tema Yönetimi**: Tüm sayfalar otomatik olarak SafeArea ve tema sağlayıcıları ile sarmalanır. Karanlık/aydınlık tema desteği kolayca eklenebilir.
+-   ⚡ **Live Reload (Canlı Yenileme)**: Kodda yaptığınız değişiklikler anında emülatör veya gerçek cihazda otomatik olarak yansır. Hızlı geliştirme ve anlık test imkanı sunar.
 
 ---
 
@@ -24,35 +23,12 @@
 
 Projeyi geliştirmek ve Android üzerinde çalıştırmak için aşağıdaki yazılımların sisteminizde kurulu olması gerekir:
 
+-   🟢 [**Node.js**](https://nodejs.org/tr/download) (Önerilen: 22.x veya üzeri)
 -   🟣 [**Visual Studio Code**](https://code.visualstudio.com/) (veya tercih ettiğiniz bir kod editörü)
--   🟢 [**Node.js**](https://nodejs.org/tr/download) (Önerilen: 20.x veya üzeri)
--   🌀 [**Git**](https://git-scm.com/downloads)
--   🛠️ [**Android Studio**](https://developer.android.com/studio?hl=tr) (Android SDK ve AVD Manager ile birlikte)
--   ☕ **Java Development Kit (JDK)** (Android Studio ile birlikte gelir, gerekirse ayrıca [OpenJDK 11 veya 17](https://adoptium.net/) yükleyin)
--   📱 **Android Emulator**: Android Studio içinden AVD Manager ile kurabilir veya daha hafif bir alternatif olarak [MEmu](https://www.memuplay.com/) gibi bir emulator kullanabilirsiniz.
+-   📱 [**MEmu Android Emulator**](https://www.memuplay.com/): MEmu hafif ve performanslı çalışması sebebiyle tavsiye edilir (veya Android Studio Emulator)
+-   🌀 [**Git**](https://git-scm.com/downloads): Repoyu klonlamak ve güncel tutabilmek için
 
-> **Not:** Android Studio'yu kurduktan sonra, "SDK Tools" sekmesinden en az bir "Android SDK Platform" ve "Android SDK Build-Tools" sürümünün yüklü olduğundan emin olun.
-
-### 2. ANDROID_HOME Ortam Değişkenini Ayarlayın
-
-Android SDK'nın kurulu olduğu dizini sisteminize tanıtmak için ANDROID_HOME ortam değişkenini ayarlamanız gerekir:
-
--   **Windows:**
-    1. Denetim Masası > Sistem > Gelişmiş Sistem Ayarları > Ortam Değişkenleri yolunu izleyin.
-    2. "Yeni" diyerek değişken adı olarak `ANDROID_HOME`, değer olarak ise genellikle `C:\Users\<kullanıcı_adı>\AppData\Local\Android\Sdk` yazın.
-    3. `Path` değişkenine de `%ANDROID_HOME%\platform-tools` ekleyin.
--   **Mac/Linux:**
-    1. Terminalde `nano ~/.bashrc` veya `nano ~/.zshrc` komutunu açın.
-    2. Dosyanın sonuna aşağıdaki satırları ekleyin:
-        ```sh
-        export ANDROID_HOME=$HOME/Library/Android/sdk
-        export PATH=$PATH:$ANDROID_HOME/platform-tools
-        ```
-    3. Dosyayı kaydedip kapatın, ardından terminali yeniden başlatın veya `source ~/.bashrc` komutunu çalıştırın.
-
-> Doğru ayarlandığından emin olmak için terminale `adb --version` yazıp çıktısını kontrol edebilirsiniz.
-
-### 3. Depoyu Klonlayın
+### 2. Repoyu Klonlayın
 
 ```sh
 git clone https://github.com/mburakkalkan/expo-starter-meb.git
@@ -75,8 +51,8 @@ npm install
 
 ### 6. Emülatöre Geliştirme APK'sını Yükleyin
 
--   📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden, MEB sertifikası entegre edilmiş ve kullanıma hazır en güncel geliştirme `.apk` dosyasını indirin. Bu APK, MEB ağında sorunsuz çalışacak şekilde özel olarak paketlenmiştir.
--   İndirdiğiniz `.apk` dosyasını emülatör penceresine sürükle-bırak yaparak kolayca kurabilirsiniz.
+-   📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden geliştirme `.apk` dosyasını indirin. Bu APK, MEB ağında sorunsuz çalışacak şekilde özel olarak paketlenmiştir.
+-   İndirdiğiniz `.apk` dosyasını emülatör penceresine sürükle-bırak yaparak yükleyin.
 
 ### 7. Projeyi Başlatın
 
