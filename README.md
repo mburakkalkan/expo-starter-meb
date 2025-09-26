@@ -59,7 +59,13 @@ npm run start
 ```
 
 > Bu komutla Metro Bundler başlatılır ve terminalde bir QR kod görüntülenir. Klavyeden **a** tuşuna basarsanız uygulama otomatik olarak Android emülatörde başlayacaktır.
->
+
+> Eğer proje başlangıcında Expo'nun versiyon kontrolü gibi çeşitli denetimler yapmasına gerek duymuyorsanız çevrimdışı modda da başlatabilirsiniz:
+
+```sh
+npm run offline
+```
+
 > Alternatif olarak, Metro Bundler ekranında çıkan QR kodunu [Expo Go](https://expo.dev/go) uygulaması ile telefonunuzdan okutarak projeyi gerçek cihazda (Android veya iOS) test edebilirsiniz. Ancak cihazınızın bilgisayarınızla aynı ağda olması gerekir. MEB hattında Expo Go ile sertifika ve bağlantı sorunları yaşanabileceğinden, doğrudan 5. adımda anlatılan APK kurulumunu kullanmanız tavsiye edilir.
 
 ---
