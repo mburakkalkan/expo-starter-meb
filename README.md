@@ -17,6 +17,15 @@
 
 ---
 
+## 🛠️ Kullanılan Teknolojiler
+
+-   [Expo](https://expo.dev/) 🚀
+-   [React Native](https://reactnative.dev/) 📱
+-   [NativeWind (Tailwind CSS)](https://www.nativewind.dev/) 🎨
+-   [React Native Paper](https://callstack.github.io/react-native-paper/) 🧩
+
+---
+
 ## ⚡️ Kurulum
 
 ### 1. Gereksinimler
@@ -67,15 +76,6 @@ npm run offline
 ```
 
 > Alternatif olarak, Metro Bundler ekranında çıkan QR kodunu [Expo Go](https://expo.dev/go) uygulaması ile telefonunuzdan okutarak projeyi gerçek cihazda (Android veya iOS) test edebilirsiniz. Ancak cihazınızın bilgisayarınızla aynı ağda olması gerekir. MEB hattında Expo Go ile sertifika ve bağlantı sorunları yaşanabileceğinden, doğrudan 5. adımda anlatılan APK kurulumunu kullanmanız tavsiye edilir.
-
----
-
-## 🛠️ Kullanılan Teknolojiler
-
--   [Expo](https://expo.dev/) 🚀
--   [React Native](https://reactnative.dev/) 📱
--   [NativeWind (Tailwind CSS)](https://www.nativewind.dev/) 🎨
--   [React Native Paper](https://callstack.github.io/react-native-paper/) 🧩
 
 ---
 
