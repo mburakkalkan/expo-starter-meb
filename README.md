@@ -26,35 +26,33 @@ Projeyi geliştirmek ve Android üzerinde çalıştırmak için aşağıdaki yaz
 -   🟢 [**Node.js**](https://nodejs.org/tr/download) (Önerilen: 22.x veya üzeri)
 -   🟣 [**Visual Studio Code**](https://code.visualstudio.com/) (veya tercih ettiğiniz bir kod editörü)
 -   📱 [**MEmu Android Emulator**](https://www.memuplay.com/): MEmu hafif ve performanslı çalışması sebebiyle tavsiye edilir (veya Android Studio Emulator)
--   🌀 [**Git**](https://git-scm.com/downloads): Repoyu klonlamak ve güncel tutabilmek için
+-   🌀 (opsiyonel) [**Git**](https://git-scm.com/downloads): Repoyu klonlamak ve güncel tutabilmek için
 
-### 2. Repoyu Klonlayın
+### 2. Repoyu Klonlayın veya zip olarak [indirin](https://github.com/mburakkalkan/expo-starter-meb/archive/refs/heads/main.zip)
 
 ```sh
 git clone https://github.com/mburakkalkan/expo-starter-meb.git
 cd expo-starter-meb
 ```
 
-### 4. Bağımlılıkları Yükleyin
+### 3. Proje dizinini komut satırı ile açın ve bağımlılıkları yükleyin
 
 ```sh
 npm install
 ```
 
-### 5. Emülatörü Başlatın
+### 4. Emülatörü Başlatın
 
--   🤖 Android Studio Emulatör ve MacOS'ta iOS Simulator kullanıyorsanız otomatik başlayacaktır.
--   🟣 MEmu kullanıyorsanız manuel olarak kısayolundan başlatmanız gerekmektedir.
--   🔌 Eğer farklı bir emülatör veya gerçek cihaz kullanacaksanız, cihazda **USB debugging (USB hata ayıklama)** özelliğini etkinleştirin ve gerekiyorsa `adb connect <cihaz_ip_adresi>` komutunu kullanarak cihazı bilgisayarınıza bağlayın.
--   📄 Kullandığınız emülatörün veya cihazın dokümantasyonunu incelemeniz tavsiye edilir.
--
+-   🟣 MEmu emülatörü kısayolundan başlatabilirsiniz.
+-   🤖 Android Studio Emulatör ve MacOS'ta iOS Simulator kullanıyorsanız 6. adımdaki aşamalarda kendisi otomatik başlayacaktır.
+-   🔌 Eğer farklı bir emülatör veya gerçek cihaz kullanacaksanız, **USB debugging (USB hata ayıklama)** özelliğini etkinleştirin.
 
-### 6. Emülatöre Geliştirme APK'sını Yükleyin
+### 5. Emülatöre Geliştirme APK'sını Yükleyin
 
 -   📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden geliştirme `.apk` dosyasını indirin. Bu APK, MEB ağında sorunsuz çalışacak şekilde özel olarak paketlenmiştir.
 -   İndirdiğiniz `.apk` dosyasını emülatör penceresine sürükle-bırak yaparak yükleyin.
 
-### 7. Projeyi Başlatın
+### 6. Projeyi Başlatın
 
 ```sh
 npm run start
@@ -79,13 +77,13 @@ npm run start
 
 -   Proje, MEB ağına uygun olarak test edilmiştir. Sertifika ve ağ ayarları ile ilgili sorun yaşarsanız, lütfen `network-config.js` dosyasındaki yapılandırmayı inceleyin.
 -   Tasarım ve tema özelleştirmeleri için `paper-theme.json` ve `tailwind.config.js` dosyalarını düzenleyebilirsiniz.
--   Tüm sayfalar otomatik olarak tema ve SafeArea ile sarmalanır, ekstra bir kapsayıcıya gerek yoktur.
+-   Tüm sayfalar otomatik olarak tema ve SafeAreaView ile sarmalanır, ekstra bir kapsayıcıya gerek yoktur.
 
 ---
 
 ## 🖥️ Öğrenci Bilgisayarlarına Dağıtım
 
-Öğrenci bilgisayarlarına projeyi dağıtırken, her bilgisayarda tekrar tekrar bağımlılık kurulumu (`npm install`) ile uğraşmamak ve Deep Freeze gibi sistem koruma yazılımlarının olası etkilerinden kaçınmak için şu yöntemi öneririz:
+Öğrenci bilgisayarlarına projeyi dağıtırken, her bilgisayarda tekrar tekrar bağımlılık kurulumu (`npm install`) ile uğraşmamak ve Deep Freeze gibi sistem koruma yazılımlarının olası etkilerinden kaçınmak için şu yöntem daha sorunsuz olacaktır:
 
 1. Geliştirici bilgisayarınızda tüm bağımlılıkları yükledikten sonra (`npm install`),
 2. Proje klasörünün tamamını (node_modules dahil) bir arşiv dosyasına (.zip/.rar) ekleyin veya doğrudan kopyalayın.
@@ -96,4 +94,4 @@ npm run start
 
 ---
 
-💡 Her türlü katkı ve geri bildirime açıktır!
+💡 Her türlü katkı için [Pull request](https://github.com/mburakkalkan/expo-starter-meb/pulls) açabilir, yaşadığınız sorunlar ve geri bildirimler içinse [Issues](https://github.com/mburakkalkan/expo-starter-meb/issues) alanını kullanabilirsiniz ❤️
