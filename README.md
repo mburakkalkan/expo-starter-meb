@@ -100,4 +100,60 @@ npm run offline
 
 ---
 
+## 📦 Uygulamanın Android APK veya iOS Çıktısını Alma
+
+### 1. Lokal Build (Sadece macOS veya Linux)
+
+Expo projesinde doğrudan kendi bilgisayarınızda APK veya iOS dosyası oluşturmak için aşağıdaki komutlar kullanılabilir. Ancak **Windows işletim sisteminde lokal build desteklenmemektedir**. Lokal build işlemleri için bir **macOS** veya **Linux** bilgisayara ihtiyacınız vardır.
+
+Development ortamı için örnek komutlar (macOS veya Linux):
+
+```sh
+npm run dev-local-build-all
+npm run dev-local-build-android
+npm run dev-local-build-ios
+```
+
+Production ortamı için örnek komutlar (macOS veya Linux):
+
+```sh
+npm run prod-local-build-all
+npm run prod-local-build-android
+npm run prod-local-build-ios
+```
+
+> iOS için lokal build almak yalnızca macOS üzerinde ve ek Apple gereksinimleriyle mümkündür.
+
+### 2. EAS (Expo Application Services) Build ile Bulut Üzerinden Build (Tüm Platformlar)
+
+Herhangi bir işletim sisteminde (Windows, macOS, Linux) Expo'nun EAS Build servisi ile bulut üzerinden APK veya iOS çıktısı alabilirsiniz. Bunun için Expo hesabınız olmalı ve aşağıdaki komutları kullanmalısınız:
+
+Development ortamı için örnek komutlar:
+
+```sh
+npm run dev-eas-build-all
+npm run dev-eas-build-android
+npm run dev-eas-build-ios
+```
+
+Production ortamı için örnek komutlar:
+
+```sh
+npm run prod-eas-build-all
+npm run prod-eas-build-android
+npm run prod-eas-build-ios
+```
+
+Komutları çalıştırdıktan sonra, Expo projenizi buluta yükler ve derleme işlemi [EAS](https://expo.dev/eas) sunucularında gerçekleşir. Build tamamlandığında size bir indirme bağlantısı verilir.
+
+> **Önemli:** EAS Build kullanmadan önce, projenin kök dizinindeki `app.json` dosyasında bulunan `expo.package` (Android için) ve `expo.projectId` alanlarını kendi Expo hesabınızda oluşturduğunuz değerlerle güncellemeniz gerekir. Aksi halde build işlemi başarısız olur. Gerekli değerleri [Expo Dashboard](https://expo.dev/) üzerinden kendi projenizi oluşturarak edinebilirsiniz.
+
+> **Not:** EAS Build servisi, her Expo hesabı için aylık belirli bir sayıda ücretsiz bulut derleme (build) hakkı sunar. Bu ücretsiz kota dolduğunda, ek build işlemleri için ücretli bir EAS aboneliği gereklidir. Eğer projede sık sık APK veya iOS çıktısı almanız gerekiyorsa, Expo'nun [fiyatlandırma sayfasını](https://expo.dev/pricing) inceleyerek uygun bir abonelik planı seçebilirsiniz.
+
+> EAS Build ile iOS çıktısı almak için Apple Developer hesabınızın olması gerekir.
+
+**Daha fazla bilgi için:** [Expo EAS Build Dokümantasyonu](https://docs.expo.dev/build/introduction/)
+
+---
+
 💡 Her türlü katkı için [Pull request](https://github.com/mburakkalkan/expo-starter-meb/pulls) açabilir, yaşadığınız sorunlar ve geri bildirimler içinse [Issues](https://github.com/mburakkalkan/expo-starter-meb/issues) alanını kullanabilirsiniz ❤️
