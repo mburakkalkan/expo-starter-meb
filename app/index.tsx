@@ -1,14 +1,8 @@
 import reactLogo from "@/assets/images/react-logo.png";
-import type { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import { Image } from "expo-image";
-import { Link, Stack } from "expo-router";
+import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-paper";
-
-const screenOptions: NativeStackNavigationOptions = {
-	title: "Giriş Ekranı",
-	headerShown: false,
-};
 
 export default function Index() {
 	const click = () => {
@@ -17,9 +11,6 @@ export default function Index() {
 
 	return (
 		<View style={styles.container}>
-			{/* Ekran ayarları */}
-			<Stack.Screen options={screenOptions} />
-
 			{/* Statik resim örneği */}
 			<Image source={reactLogo} style={styles.reactLogo} />
 

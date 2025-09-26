@@ -1,14 +1,7 @@
 import CharacterBox from "@/components/CharacterBox";
-import type { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import axios from "axios";
-import { Stack } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, View } from "react-native";
-
-export const screenOptions: NativeStackNavigationOptions = {
-	title: "Fetch Örneği",
-	headerShown: true,
-};
 
 export default function Page2() {
 	// State tanımları
@@ -39,7 +32,6 @@ export default function Page2() {
 
 	return (
 		<View className="flex-1">
-			<Stack.Screen options={screenOptions} />
 			{/* Karakter listesini FlatList ile göster */}
 			<FlatList
 				data={characters}

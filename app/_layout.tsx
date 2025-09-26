@@ -26,14 +26,17 @@ const defaultScreenOptions = {
 
 export default function Layout() {
 	return (
-		<PaperProvider theme={theme}>
-			<SafeAreaProvider>
+		<SafeAreaProvider>
+			<PaperProvider theme={theme}>
 				<SafeAreaView style={styles.container}>
 					<StatusBar style="auto" backgroundColor={MyCustomTheme.colors.secondaryContainer} />
-					<Stack screenOptions={defaultScreenOptions} />
+					<Stack screenOptions={defaultScreenOptions}>
+						<Stack.Screen name="index" options={{ headerShown: false }} />
+						<Stack.Screen name="page2" options={{ headerShown: true, title: "Fetch Örneği" }} />
+					</Stack>
 				</SafeAreaView>
-			</SafeAreaProvider>
-		</PaperProvider>
+			</PaperProvider>
+		</SafeAreaProvider>
 	);
 }
 
