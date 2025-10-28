@@ -94,10 +94,11 @@ npm run offline
 
 Öğrenci bilgisayarlarına projeyi dağıtırken, her bilgisayarda tekrar tekrar bağımlılık kurulumu (`npm install`) ile uğraşmamak ve Deep Freeze gibi sistem koruma yazılımlarının olası etkilerinden kaçınmak için şu yöntem daha sorunsuz olacaktır:
 
-1. Geliştirici bilgisayarınızda tüm bağımlılıkları yükledikten sonra (`npm install`),
-2. Proje klasörünün tamamını (node_modules dahil) bir arşiv dosyasına (.zip/.rar) ekleyin veya doğrudan kopyalayın.
-3. Bu arşivi/klasörü öğrenci bilgisayarlarına dağıtın.
-4. Öğrenciler, klasörü açtıktan sonra doğrudan `npm run start` komutuyla projeyi başlatabilir.
+1. Öncelikle ilk adımda yer alan gerekli uygulamaları öğrenci bilgisayarlarına da kurun.
+2. Öğretmen bilgisayarınızda projeyi indirin ve tüm bağımlılıkları `npm install` komutu ile yükleyin.
+3. Bağımlılıkları yüklenmiş proje klasörünün tamamını (node_modules dahil) bir zip/rar dosyasına sıkıştırın.
+4. Sıkıştırılmış paketi öğrenci bilgisayarlarına dağıtın ve istediğiniz bir yere zip/rar'dan çıkarın.
+5. Böylece öğrenciler projeyi `npm run start` komutuyla doğrudan başlatabilirler.
 
 > Bu yöntem, Deep Freeze gibi sistemlerde dahi bağımlılıkların eksikliği veya kurulum hatası yaşanmasını önler ve dağıtımı çok daha hızlı hale getirir.
 
