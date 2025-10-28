@@ -33,8 +33,9 @@
 Projeyi geliştirmek ve Android üzerinde çalıştırmak için aşağıdaki yazılımların sisteminizde kurulu olması gerekir:
 
 -   🟢 [**Node.js**](https://nodejs.org/tr/download) (Önerilen: 22.x veya üzeri)
--   🟣 [**Visual Studio Code**](https://code.visualstudio.com/) (veya tercih ettiğiniz bir kod editörü)
--   📱 [**MEmu Android Emulator**](https://www.memuplay.com/): MEmu hafif ve performanslı çalışması sebebiyle tavsiye edilir (veya Android Studio Emulator)
+-   🟠 [**Android Studio**](https://developer.android.com/studio?hl=tr) (SDK kullanımı için)
+-   🟣 [**Visual Studio Code**](https://code.visualstudio.com) (veya tercih ettiğiniz bir kod editörü)
+-   📱 [**MEmu Android Emulator**](https://www.memuplay.com): MEmu hafif ve performanslı çalışması sebebiyle tavsiye edilir (veya Android Studio Emulator)
 -   🌀 (opsiyonel) [**Git**](https://git-scm.com/downloads): Repoyu klonlamak ve güncel tutabilmek için
 
 ### 2. Repoyu Klonlayın veya zip olarak [indirin](https://github.com/mburakkalkan/expo-starter-meb/archive/refs/heads/main.zip)
