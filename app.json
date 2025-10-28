@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "Expo Starter MEB",
 		"slug": "expo-starter-meb",
-		"version": "1.0.0",
+		"version": "1.1.0",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
 		"scheme": "expo54",
@@ -20,7 +20,12 @@
 			},
 			"edgeToEdgeEnabled": true,
 			"predictiveBackGestureEnabled": false,
-			"package": "com.mburakkalkan.expostartermeb"
+			"package": "com.mburakkalkan.expostartermeb",
+			"config": {
+				"googleMaps": {
+					"apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+				}
+			}
 		},
 		"web": {
 			"output": "static",

@@ -2,6 +2,7 @@ import reactLogo from "@/assets/images/react-logo.png";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+import MapView from "react-native-maps";
 import { Button } from "react-native-paper";
 
 export default function Index() {
@@ -29,6 +30,19 @@ export default function Index() {
 			<Link href="/page2" className="text-blue-500 font-bold">
 				Sayfa 2'ye Git
 			</Link>
+
+			{/* Harita bileşeni örneği */}
+			<MapView
+				style={styles.map}
+				mapType="standard"
+				provider="google"
+				initialRegion={{
+					latitude: 37.78825,
+					longitude: -122.4324,
+					latitudeDelta: 0.0922,
+					longitudeDelta: 0.0421,
+				}}
+			/>
 		</View>
 	);
 }
@@ -48,5 +62,9 @@ const styles = StyleSheet.create({
 	reactLogo: {
 		width: 100,
 		height: 100,
+	},
+	map: {
+		width: 300,
+		height: 200,
 	},
 });
