@@ -2,7 +2,7 @@
 
 ## 🚀 Proje Tanıtımı
 
-**Expo Starter MEB**, MEB'e bağlı okullarda sorunsuz çalışacak şekilde özel olarak hazırlanmış, modern ve ölçeklenebilir bir React Native başlangıç projesidir. Proje, güncel tasarım standartlarına uygun olup yüksek donanım gereksinimi olmadan çoklu platformda hızlı geliştirme ve kolay özelleştirme imkanı sunar.
+**Expo Starter MEB**, MEB internet altyapısına bağlı okullarda sorunsuz çalışacak şekilde özel olarak hazırlanmış, modern ve ölçeklenebilir bir React Native başlangıç projesidir. Proje, güncel tasarım standartlarına uygun olup yüksek donanım gereksinimi olmadan çoklu platformda hızlı geliştirme ve kolay özelleştirme imkanı sunar.
 
 📱 MTAL Bilişim Teknolojileri Alanı'nın **Mobil Uygulamalar** dersinde kullanıma uygundur. Web Tabanlı Uygulamalar dersiyle güçlü bir paralellik kurar. Özellikle React Native'in HTML ve CSS'e çok yakın sözdizimi sayesinde öğrenciler, mobil ve web konseptlerini karşılaştırmalı ve bütüncül bir şekilde öğrenebilir. Bir derste edindikleri bilgileri diğerine kolayca transfer edebilir ve böylece iki ders birbirini doğal olarak destekler hale gelir.
 
