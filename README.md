@@ -59,8 +59,10 @@ npm install
 
 ### 5. Emülatöre Geliştirme APK'sını Yükleyin
 
--   📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden geliştirme `.apk` dosyasını indirin. Bu APK, MEB ağında sorunsuz çalışacak şekilde özel olarak paketlenmiştir.
+-   📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden geliştirme `.apk` dosyasını indirin.
 -   İndirdiğiniz `.apk` dosyasını emülatör penceresine sürükle-bırak yaparak yükleyin.
+-   Geliştirme esnasında kodlarınız Live Reload ile canlı olarak bu uygulama içerisinde çalıştırılacaktır.
+-   (Dilerseniz bu adım yerine [Expo Go](https://expo.dev/go) uygulamasını da kullanabilirsiniz. Fakat Expo Go içerisinde MEB sertifikası bulunmadığı için MEB hattında çalışırken geliştirme esnasında SSL kaynaklı hatalarla karşılaşılmaktadır.)
 
 ### 6. Projeyi Başlatın
 
