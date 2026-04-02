@@ -8,7 +8,7 @@ import { MD3LightTheme, PaperProvider } from "react-native-paper";
 import { ThemeProp } from "react-native-paper/lib/typescript/types";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-import "./global.css";
+import "@/global.css";
 
 const theme: ThemeProp = {
 	...MD3LightTheme,

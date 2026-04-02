@@ -35,7 +35,7 @@ export default function Page2() {
 			{/* Karakter listesini FlatList ile göster */}
 			<FlatList
 				data={characters}
-				keyExtractor={(item) => item.id.toString()}
+				keyExtractor={(item: any) => item.id.toString()}
 				// Her bir karakteri render eden fonksiyon
 				renderItem={({ item }) => <CharacterBox character={item} />}
 				contentContainerStyle={{ padding: 16 }}
