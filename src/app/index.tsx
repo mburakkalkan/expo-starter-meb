@@ -11,6 +11,8 @@ export default function Index() {
 
 	return (
 		<View style={styles.container}>
+			<Text className="font-serif text-center font-bold text-indigo-500 text-3xl">Expo Starter MEB</Text>
+
 			{/* Statik resim örneği */}
 			<Image source={reactLogo} style={styles.reactLogo} />
 
