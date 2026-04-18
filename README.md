@@ -61,8 +61,6 @@ npm install
 
 - 📦 [**Releases**](https://github.com/mburakkalkan/expo-starter-meb/releases) bölümünden geliştirme `.apk` dosyasını indirin.
 - İndirdiğiniz `.apk` dosyasını emülatör penceresine sürükle-bırak yaparak yükleyin.
-- Geliştirme esnasında kodlarınız Live Reload ile canlı olarak bu uygulama içerisinde çalıştırılacaktır.
-- (Dilerseniz bu adım yerine [Expo Go](https://expo.dev/go) uygulamasını da kullanabilirsiniz. Fakat Expo Go içerisinde MEB sertifikası bulunmadığı için MEB hattında çalışırken geliştirme esnasında SSL kaynaklı hatalarla karşılaşılmaktadır.)
 
 ### 6. Projeyi Başlatın
 
@@ -70,15 +68,16 @@ npm install
 npm run start
 ```
 
-> Bu komutla Metro Bundler başlatılır ve terminalde bir QR kod görüntülenir. Klavyeden **a** tuşuna basarsanız uygulama otomatik olarak Android emülatörde başlayacaktır.
+- Bu komutla Metro Bundler başlatılır ve terminalde bir QR kod görüntülenir. Klavyeden 🅰️ tuşuna basarsanız uygulama otomatik olarak Android emülatörde başlayacaktır.
+- Geliştirme esnasında kodlarınız Live Reload ile canlı olarak bu uygulama içerisinde çalıştırılacaktır.
 
-> Eğer proje başlangıcında Expo'nun versiyon kontrolü gibi çeşitli denetimler yapmasına gerek duymuyorsanız çevrimdışı modda da başlatabilirsiniz:
+https://github.com/user-attachments/assets/57ead161-5587-4e07-ac0a-6080f4fc9fd1
+
+💡 Eğer proje başlangıcında Expo'nun versiyon kontrolü gibi çeşitli denetimler yapmasına gerek duymuyorsanız çevrimdışı modda da başlatabilirsiniz:
 
 ```sh
 npm run offline
 ```
-
-> Alternatif olarak, Metro Bundler ekranında çıkan QR kodunu [Expo Go](https://expo.dev/go) uygulaması ile telefonunuzdan okutarak projeyi gerçek cihazda (Android veya iOS) test edebilirsiniz. Ancak cihazınızın bilgisayarınızla aynı ağda olması gerekir. MEB hattında Expo Go ile sertifika ve bağlantı sorunları yaşanabileceğinden, doğrudan 5. adımda anlatılan APK kurulumunu kullanmanız tavsiye edilir.
 
 ---
 
@@ -126,7 +125,7 @@ npm run prod-local-build-android
 npm run prod-local-build-ios
 ```
 
-> iOS için lokal build almak yalnızca macOS üzerinde ve ek Apple gereksinimleriyle mümkündür.
+> ⚠️ iOS için lokal build almak yalnızca macOS üzerinde ve Apple Developer hesabı gereksinimleriyle mümkündür.
 
 ### 2. EAS (Expo Application Services) Build ile Bulut Üzerinden Build (Tüm Platformlar)
 
