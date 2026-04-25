@@ -11,13 +11,13 @@ export default function Index() {
 
 	return (
 		<View style={styles.container}>
-			<Text className="font-serif text-center font-bold text-indigo-500 text-3xl">Expo Starter MEB</Text>
+			<Text className="font-serif text-center font-bold text-primary text-3xl">Expo Starter MEB</Text>
 
 			{/* Statik resim örneği */}
 			<Image source={reactLogo} style={styles.reactLogo} />
 
 			{/* Tailwind CSS ile stillendirilmiş metin örneği */}
-			<Text className="text-red-500 font-bold text-center">Bu ekran app/index.tsx içindeki ana ekrandır.</Text>
+			<Text className="text-error font-bold text-center">Bu ekran app/index.tsx içindeki ana ekrandır.</Text>
 
 			{/* React Native Paper butonu örneği */}
 			<Button onPress={click} mode="contained" icon="mouse">
@@ -28,7 +28,7 @@ export default function Index() {
 			<Image style={styles.image} source="https://placehold.co/300x200" contentFit="cover" />
 
 			{/* Sayfa bağlantısı örneği */}
-			<Link href="/page2" className="text-blue-500 font-bold">
+			<Link href="/page2" className="text-primary font-bold">
 				Sayfa 2'ye Git
 			</Link>
 		</View>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		gap: 30,
+		backgroundColor: "transparent",
 	},
 	image: {
 		width: 300,
@@ -50,9 +51,5 @@ const styles = StyleSheet.create({
 	reactLogo: {
 		width: 100,
 		height: 100,
-	},
-	map: {
-		width: 300,
-		height: 200,
 	},
 });
