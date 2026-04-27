@@ -29,8 +29,8 @@ export default function Layout() {
 							contentStyle: { backgroundColor: themeColors.background },
 						}}
 					>
-						<Stack.Screen name="index" options={{ headerShown: false }} />
-						<Stack.Screen name="page2" options={{ headerShown: true, title: "Fetch Örneği" }} />
+						<Stack.Screen name="index" options={{ title: "Ana Sayfa", headerShown: false }} />
+						<Stack.Screen name="page2" options={{ title: "Fetch Örneği", headerShown: true }} />
 					</Stack>
 				</View>
 			</PaperProvider>

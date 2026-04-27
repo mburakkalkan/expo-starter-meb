@@ -4,7 +4,7 @@
 //             colors.rose · colors.pink · colors.orange · colors.amber
 import colors from "tailwindcss/colors";
 
-export const PRIMARY = colors.pink;
+export const PRIMARY = colors.indigo;
 export const SECONDARY = colors.slate;
 export const TERTIARY = colors.violet;
 export const ERROR = colors.red;

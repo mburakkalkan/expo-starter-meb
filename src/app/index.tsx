@@ -1,10 +1,13 @@
+import ExpoIcon from "@/assets/images/expo-logo.svg";
 import reactLogo from "@/assets/images/react-logo.png";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-paper";
+import { Button, useTheme } from "react-native-paper";
 
 export default function Index() {
+	const { colors } = useTheme();
+
 	const click = () => {
 		alert("Merhaba dünya!");
 	};
@@ -12,6 +15,9 @@ export default function Index() {
 	return (
 		<View style={styles.container}>
 			<Text className="font-serif text-center font-bold text-primary text-3xl">Expo Starter MEB</Text>
+
+			{/* SVG örneği */}
+			<ExpoIcon fill={colors.inversePrimary} width={81.5} height={75.75} />
 
 			{/* Statik resim örneği */}
 			<Image source={reactLogo} style={styles.reactLogo} />
@@ -25,7 +31,7 @@ export default function Index() {
 			</Button>
 
 			{/* Uzak resim örneği */}
-			<Image style={styles.image} source="https://placehold.co/300x200" contentFit="cover" />
+			<Image style={styles.image} source="https://placehold.net/3.png" contentFit="cover" />
 
 			{/* Sayfa bağlantısı örneği */}
 			<Link href="/page2" className="text-primary font-bold">
@@ -49,7 +55,7 @@ const styles = StyleSheet.create({
 		height: 200,
 	},
 	reactLogo: {
-		width: 100,
-		height: 100,
+		width: 80,
+		height: 80,
 	},
 });
